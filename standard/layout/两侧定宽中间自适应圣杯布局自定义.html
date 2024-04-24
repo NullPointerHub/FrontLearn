@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            height: 3em;
+            background: #cccccc;
+        }
+
+        #parent {
+            height: 300px;
+            padding-left: 100px;
+            padding-right: 80px;
+        }
+
+        #center {
+            float: left;
+            height: 300px;
+            width: 100%;
+            background: #61dafb;
+        }
+
+        #left {
+            float: left;
+            height: 300px;
+            position: relative;
+            left: -100px;
+            width: 100px;
+            margin-left: -100%;
+            background: #006fc2;
+        }
+
+        #right {
+            float: right;
+            height: 300px;
+            margin-left: -100%;
+            position: relative;
+            left: 80px;
+            width: 80px;
+            background: #006fc2;
+        }
+
+
+        #footer {
+            height: 1.5em;
+            background: #00ff00;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<body>
+<div id="header">Header</div>
+<div id="parent">
+    <!--#center需要放在前面-->
+    <div id="center">中间自适应</div>
+    <div id="left">左列定宽</div>
+    <div id="right">右列定宽</div>
+</div>
+<div id="footer">Footer</div>
+
+
+</body>
+
+</body>
+</html>

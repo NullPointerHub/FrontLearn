@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列定宽一列自适应</title>
+    <style>
+        #parent{
+            display: flex;
+        }
+
+        #left{
+            height: 300px;
+            width: 200px;
+            background: #61dafb;
+        }
+
+        #center{
+            height: 400px;
+            width: 100px;
+            background: #006fc2;
+        }
+
+        #right{
+            height: 500px;
+            flex-grow: 1;
+            background: #e2b5b5;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+<div id="parent">
+    <div id="left">左列定宽</div>
+    <div id="center">中间定宽</div>
+    <div id="right">右列自适应</div>
+</div>
+
+
+</body>
+</html>

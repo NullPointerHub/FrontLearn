@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏布局</title>
+
+    <style>
+        html,body,#parent{height:100%;}
+
+        #parent{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #top{
+            height: 40px;
+            background: #e2b5b5;
+        }
+
+        #middle{
+            flex: 1;
+            display: flex;
+        }
+
+        #left{
+            width: 100px;
+            background: #006fc2;
+        }
+
+        #right{
+            background: #61dafb;
+            flex: 1;
+        }
+
+
+        #bottom{
+            height: 30px;
+            background: #e2b5b5;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="top">top</div>
+    <div id="middle">
+        <div id="left">left</div>
+        <div id="right">right</div>
+    </div>
+    <div id="bottom">bottom</div>
+</div>
+
+
+</body>
+</html>

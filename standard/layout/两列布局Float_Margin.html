@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列布局</title>
+
+    <style>
+        #left{
+            float: left;
+            width: 8em;
+            height: 500px;
+            background: #61dafb;
+        }
+
+        #right{
+            margin-left: 8em;
+            height: 600px;
+            background: #006fc2;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="left">左列定宽</div>
+<div id="right">
+    <h1>右列自适应</h1>
+    <p>#left左浮动，脱离文档流，#right为了不被#left挡住，设置margin-left大于等于#left的宽度达到视觉上的两栏布局</p>
+    <p>
+        多列布局，也就是多个div，并列一行，首先想到的是float布局，因为多个div默认是上下布局并且每个div占据的宽度100%的父元素，
+        设置float可以让某个元素脱离文档流，进一步，为了不被遮挡，不设置的float的元素，需要设置margin。
+    </p>
+</div>
+
+</body>
+</html>

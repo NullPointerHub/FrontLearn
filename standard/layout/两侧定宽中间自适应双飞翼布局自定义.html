@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>两侧定宽中间自适应</title>
+
+    <style>
+        #header {
+            height: 60px;
+            background-color: #ccc;
+        }
+
+        #parent{
+            height: 500px;
+        }
+
+        #center{
+            float: left;
+            width: 100%;
+            height: 500px;
+            background: #e2b5b5;
+        }
+
+        #main{
+            /*padding: 0 100px 0 200px;*/
+            margin: 0 100px 0 200px;
+        }
+
+
+        #left{
+            float: left;
+            width: 200px;
+            height: 500px;
+            margin-left: -100%;
+            background: #006fc2;
+        }
+
+        #right{
+            float: right;
+            width: 100px;
+            height: 500px;
+            margin-left: -100px;
+            background: #61dafb;
+        }
+
+        #footer {
+            height: 60px;
+            background-color: #ccc;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="header">Header</div>
+<!--中间栏需要放在前面-->
+<div id="parent">
+    <div id="center">
+        <div id="main">
+            中间自适应<br/>
+            中间这一块可以设置<br/>
+            padding: 0 左侧盒子宽度 0 右侧盒子宽度;<br/>
+            或者<br/>
+            margin: 0 左侧盒子宽度 0 右侧盒子宽度;<br/>
+            并且中间这一块必须设置一个子div#main嵌套在div#center之中，
+            否则看起来文字将隐藏，实则达不到双飞翼效果，并且上述padding和margin是设置在div#main之中的。
+        </div>
+    </div>
+    <div id="left">左列定宽</div>
+    <div id="right">右列定宽</div>
+</div>
+<div id="footer">Footer</div>
+
+</body>
+</html>

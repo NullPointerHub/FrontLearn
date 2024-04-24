@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一列不定一列自适应</title>
+
+    <style>
+        #parent{
+            display: flex;
+        }
+
+
+        #left{
+            height: 400px;
+            background: #61dafb;
+        }
+
+        #right{
+            flex: 1;
+            height: 500px;
+            background: #006fc2;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="left">左列不定宽,Flex子元素没有设置任何属性，元素的宽度随着内容的宽度变化而变化</div>
+    <div id="right">右列自适应,Flex子元素,flex:1占据剩余元素的宽度</div>
+</div>
+
+</body>
+</html>

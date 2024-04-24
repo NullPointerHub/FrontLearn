@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子元素100%margin超出父元素100%</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        #parent{
+            height: 100px;
+            width: 200px;
+            background: #93c759;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #son{
+            box-sizing: border-box;
+            height: 60px;
+            width: 100%;
+            background: #61dafb;
+            margin-left: 10px;
+            padding-left: 1em;;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="parent">
+
+    <div id="son">
+        你好，很高兴见到你，你最近还好吗？
+    </div>
+
+</div>
+
+父元素设置了固定尺寸with或者height，子元素设置了padding或者marin超出了父元素尺寸，
+在视觉上会超出父元素内容，而不会撑开父元素尺寸。
+
+</body>
+</html>

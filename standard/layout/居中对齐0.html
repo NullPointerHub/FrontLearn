@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>居中对齐</title>
+
+    <style>
+
+        body {
+            background: #f06d06;
+            font-size: 80%;
+            padding: 20px;
+        }
+
+        #parent {
+            position: relative;
+            background: white;
+            height: 200px;
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            resize: both;
+            overflow: auto;
+        }
+
+        #son {
+            background: black;
+            color: white;
+            width: 200px;
+            height: 100px;
+            margin: -70px 0 0 -120px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div id="parent">
+
+    <div id="son">
+
+
+    </div>
+
+</div>
+
+
+<p>
+    这种方式可以应用在子元素宽度已知，核心代码:
+</p>
+<div>
+    .parent {
+    position: relative;
+    }
+
+    .child {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: -70px 0 0 -170px;
+    }
+
+
+    margin负值的简单说明参考(https://www.quirksmode.org/blog/archives/2020/02/negative_margin.html):
+    margin的top left为负值，可以将自身拉向上面或者左面的元素，
+    bottom right负值，可以将下面或者右面的元素拉向本元素。
+
+
+</div>
+
+
+</body>
+</html>

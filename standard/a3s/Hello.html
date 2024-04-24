@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>axios基本使用</title>
+</head>
+<body>
+<button id="btn1">发送get请求</button> <br><br>
+<button id="btn2">发送post请求</button><br><br>
+<button id="btn3">发送put请求</button><br><br>
+<button id="btn4">发送delete请求</button>
+
+<hr>
+
+<div>其他发送请求的api:</div><br><br>
+<button id="btn5">发送get请求1</button> <br><br>
+<button id="btn6">发送post请求1</button><br><br>
+<button id="btn7">发送put请求1</button><br><br>
+<button id="btn8">发送delete请求1</button>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    //发送get
+    document.getElementById("btn1").onclick = function(){
+        axios({
+            method:"GET",
+            url:"http://localhost:3000/posts/1"
+        }).then(response=>{
+            console.log(response);
+        })
+    };
+
+    //发送post
+    document.getElementById("btn2").onclick = function(){
+        axios({
+            method:"POST",
+            url:"http://localhost:3000/posts",
+            data:{
+                title:"axios学习",
+                author:"Yehaocong"
+            }
+        }).then(response=>{
+            console.log(response);
+        })
+    };
+    //发送put
+    document.getElementById("btn3").onclick = function(){
+        axios({
+            method:"PUT",
+            url:"http://localhost:3000/posts/2",
+            data:{
+                title:"axios学习",
+                author:"Liaoxiaoyan"
+            }
+        }).then(response=>{
+            console.log(response);
+        })
+    };
+    document.getElementById("btn4").onclick = function(){
+        axios({
+            method:"DELETE",
+            url:"http://localhost:3000/posts/2",
+        }).then(response=>{
+            console.log(response);
+        })
+    };
+
+
+
+    //其他发送请求的api
+
+
+    document.getElementById("btn5").onclick = function(){
+        //发送get,使用get，第一个参数时url，第二个参数时config配置对象
+        axios.get("http://localhost:3000/posts/1")
+            .then(response=>{
+                console.log(response);
+            })
+    };
+
+    //发送post
+    document.getElementById("btn6").onclick = function(){
+        //发送post请求，第一个参数时url，第二个参数时请求体，第三个参数时config配置对象
+        axios.post("http://localhost:3000/posts",
+            {title:"axios学习2",
+                author:"Yehaocong2"})
+            .then(response=>{
+                console.log(response);
+            })
+    };
+    //发送put,
+    document.getElementById("btn7").onclick = function(){
+        //发送put,接收三个参数，url  请求体 、 config配置对象
+        axios.put("http://localhost:3000/posts/2",{title:"axios学习",
+            author:"Liaoxiaoyan"})
+            .then(response=>{
+                console.log(response);
+            })
+    };
+    document.getElementById("btn8").onclick = function(){
+        //发送delete请求，接收2个参数， url config配置对象
+        axios.delete("http://localhost:3000/posts/3")
+            .then(response=>{
+                console.log(response);
+            })
+    };
+
+    //这个与axios({})基本相同
+    // axios.request({
+
+    // })
+</script>
+</html>

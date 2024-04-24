@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列布局</title>
+
+    <style>
+        #parent {
+            position: relative;
+        }
+
+        #left {
+            position: absolute;
+            height: 400px;
+            width: 100px;
+            background: #61dafb;
+        }
+
+        #right {
+            position: absolute;
+            /**当元素设置了absolute属性，则这个块元素的宽度将会是内容的宽度
+            此时，如果想设置元素的宽度有两个方式：
+            1:设置width属性
+            2:设置left 和 right属性
+            如果同时设置，那么width属性的优先级高于right属性。
+            **/
+            left: 100px;
+            height: 500px;
+            right: 0;
+            background: #006fc2;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div id="parent">
+    <div id="left">左列定宽</div>
+    <div id="right">右列自适应</div>
+</div>
+
+
+
+
+</body>
+
+<script>
+
+
+    function AttributeValue(id) {
+
+        const element = document.getElementById(id);
+        return  window.getComputedStyle(element).zIndex;
+    }
+
+
+</script>
+
+
+</html>

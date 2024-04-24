@@ -1,0 +1,3 @@
+# Project exclude paths
+/App/learn-axios/node_modules/
+/App/learn-jsx/node_modules/

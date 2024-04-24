@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两侧定宽中间自适应</title>
+
+    <style>
+        #parent{
+            display: grid;
+            height: 300px;
+            grid-template-columns: 100px auto 80px;
+            grid-template-rows: 60px auto 60px;
+
+            grid-template-areas:
+        "header header header"
+        "leftside main rightside"
+        "footer footer footer";
+        }
+
+        #header{
+            grid-area: header;
+            background: #cccccc;
+        }
+
+        #center{
+            grid-area: main;
+            background: #61dafb;
+        }
+
+        #left{
+            grid-area: leftside;
+            background: #006fc2;
+        }
+
+        #right{
+            grid-area: rightside;
+            background: #006fc2;
+        }
+        #footer{
+            grid-area: footer;
+            background: #cccccc;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="header">Header</div>
+    <!--#center需要放在前面-->
+    <div id="center">中间自适应
+    </div>
+    <div id="left">左列定宽</div>
+    <div id="right">右列定宽</div>
+    <div id="footer">Footer</div>
+</div>
+
+
+</body>
+</html>

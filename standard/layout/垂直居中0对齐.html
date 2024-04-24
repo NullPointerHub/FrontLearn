@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+
+    <style>
+        body{
+            background: orange;
+        }
+
+        #parent{
+            width: 200px;
+            height: 100px;
+            background: white;
+            position: relative;
+        }
+
+        #son{
+            width: 40px;
+            height: 40px;
+            background: #61dafb;
+            position: absolute;
+            top: 50%;
+            /*margin-top: -20px;!**自身高度的一半，但是当自身元素的高度未知时，这种方式则不行**!*/
+            transform: translateY(-50%);/**上移自身高度的一半，可以应用在自身高度的已知或者未知的情况**/
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="son">
+
+    </div>
+</div>
+
+
+</body>
+</html>

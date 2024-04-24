@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列布局</title>
+
+
+    <style>
+        .container {
+            overflow: hidden;
+        }
+
+        .left,
+        .right,
+        .center {
+            float: left;
+            height: 500px;
+        }
+
+        .left {
+            width: 300px;
+            margin-left: -100%;
+            background: #000000;
+        }
+
+        .right {
+            width: 400px;
+            margin-left: -400px;
+            background: #00FFFF;
+        }
+
+        .center {
+            width: 100%;
+            background: #93c759;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="center">Center</div>
+    <div class="left">Left</div>
+    <div class="right">Right</div>
+</div>
+
+
+</body>
+</html>

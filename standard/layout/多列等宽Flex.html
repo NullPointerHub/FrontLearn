@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多列等宽</title>
+    <style>
+        #parent{
+            display: flex;
+        }
+
+        .column{
+            height: 300px;
+            flex: 1;
+        }
+
+        .column:nth-child(2n + 0){background: #61dafb;}
+        .column:nth-child(2n + 1){background: #006fc2;}
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="parent">
+    <div class="column">1 <p>我是文字我是文字我输文字我是文字我是文字</p></div>
+    <div class="column">2 <p>我是文字我是文字我输文字我是文字我是文字</p></div>
+    <div class="column">3 <p>我是文字我是文字我输文字我是文字我是文字</p></div>
+    <div class="column">4 <p>我是文字我是文字我输文字我是文字我是文字</p></div>
+    <div class="column">5 <p>我是文字我是文字我输文字我是文字我是文字</p></div>
+    <div class="column">6 <p>我是文字我是文字我输文字我是文字我是文字</p></div>
+</div>
+
+
+</body>
+</html>

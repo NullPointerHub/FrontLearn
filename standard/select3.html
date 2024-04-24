@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    #choose {
+      padding: 8px 5px;
+      width: 190px;
+      outline: none;
+      border: 1px solid rebeccapurple;
+      border-radius: 5px;
+    }
+
+    #option {
+      display: none;
+      width: 180px;
+      padding: 5px 10px;
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: #e2b5b5;
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+
+  </style>
+
+
+  <script>
+    // $(".choose").click(function () {
+    //   $(".option").show()
+    // })
+
+
+    function clickHandler() {
+      document.getElementById("option").style.display = "block";
+    }
+
+    function clickHandler1(object) {
+
+      console.log(object)
+
+      let html = object.value;
+
+      document.getElementById("choose").value = object.innerHTML;
+      document.getElementById("option").style.display = "none";
+    }
+
+
+    // $(".option li").click(function () {
+    //   var _text = ($(this).text())
+    //   $(".choose").val(_text)
+    //   $(".option").hide()
+    // })
+
+    // //如果某些选项不支持点击，提供下面这个思路
+    // $(".option li").click(function () {
+    //   var _text = ($(this).text())
+    //   if (_text == 33) {
+    //
+    //   } else {
+    //     $(".choose").val(_text)
+    //     $(".option").hide()
+    //   }
+    // })
+
+  </script>
+
+</head>
+<body>
+
+<input id="choose" type="text" placeholder="请输入"  onclick="clickHandler()"  readonly="readonly">
+<div id="option">
+  <ul>
+    <li onclick="clickHandler1(this)">11</li>
+    <li onclick="clickHandler1(this)">22</li>
+    <li onclick="clickHandler1(this)">33</li>
+  </ul>
+</div>
+
+<div>
+  "Hello"
+</div>
+
+
+</body>
+</html>

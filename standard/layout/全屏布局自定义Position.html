@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏布局</title>
+
+    <style>
+        #parent{
+            position: relative;
+        }
+
+        #top{
+            height: 20px;
+            background: #61dafb;
+        }
+
+        #left{
+            height: 300px;
+            width: 100px;
+            background: #006fc2;
+            position: absolute;
+        }
+
+        #right{
+            height: 300px;
+            background: #93c759;
+            position: absolute;
+            left: 100px;
+            right: 0;
+        }
+
+        #bottom{
+            height: 2em;
+            background: #61dafb;
+            position: absolute;
+            top: 320px;
+            left: 0;
+            right: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="top">top</div>
+    <div id="left">left</div>
+    <div id="right">right</div>
+    <div id="bottom">bottom</div>
+</div>
+
+
+</body>
+</html>

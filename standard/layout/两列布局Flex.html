@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列布局</title>
+
+    <style>
+        #parent{
+            display: flex;
+        }
+
+        #left{
+            height: 400px;
+            width: 200px;
+            background: #61dafb;
+        }
+
+        #right{
+            height: 500px;
+            flex: 1;/**占据父元素的剩余空间**/
+            background: #006fc2;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="parent">
+    <div id="left">左列定宽</div>
+    <div id="right">右列自适应</div>
+</div>
+
+
+</body>
+</html>

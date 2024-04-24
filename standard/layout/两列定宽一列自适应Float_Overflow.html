@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列定宽一列自适应</title>
+
+    <style>
+
+        #parent{min-width: 300px;} /*防止宽度不够,子元素换行,防止打乱布局*/
+
+        #left {
+            margin-right: 10px; /*间隔*/
+            float: left;
+            width: 100px;
+            height: 500px;
+            background-color: #f00;
+        }
+        #center{
+            margin-right: 10px; /*在此定义和#right的间隔*/
+            float: left;
+            width: 200px;
+            height: 500px;
+            background-color: #eeff2b;
+        }
+        #right {
+            overflow: hidden;  /*触发bfc*/
+            height: 500px;
+            background-color: #0f0;
+        }
+
+        #left{
+            float: left;
+            width: 200px;
+            height: 300px;
+            background: #61dafb;
+        }
+        #center{
+            float: left;
+            width: 100px;
+            height: 400px;
+            background: #006fc2;
+        }
+        #right{
+            height: 500px;
+            background: red;
+            overflow: scroll;
+
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="left">左列定宽</div>
+    <div id="center">中间定宽</div>
+    <div id="right">右列自适应</div>
+</div>
+
+
+</body>
+</html>

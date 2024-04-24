@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列定宽，一列自适应</title>
+
+    <style>
+
+        #parent{min-width: 300px;} /*100+10+200,防止宽度不够,子元素换行,注意这里min-width的使用，防止打乱布局*/
+
+        #left{
+            float: left;
+            height: 300px;
+            width: 200px;
+            background: #61dafb;
+        }
+
+        #center{
+            float: left;
+            height: 400px;
+            width: 100px;
+            background: #006fc2;
+        }
+
+        #right{
+            height: 500px;
+            background: red;
+            margin-left: 300px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="left">左列定宽</div>
+    <div id="center">中间定宽</div>
+    <div id="right">右列自适应</div>
+</div>
+
+
+</body>
+</html>
