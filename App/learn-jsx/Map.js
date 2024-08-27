@@ -1,8 +1,8 @@
 
 // let arr1 = [100, 200, 300]
-// arr1.map(function(item,home,array) {
-//   //  console.log(array[home])
-//  //   console.log(item,home,array)
+// arr1.map(function(item,hall,array) {
+//   //  console.log(array[hall])
+//  //   console.log(item,hall,array)
 // })
 
 //两个参数，但是有return的

@@ -133,7 +133,7 @@ function postTest2() {
  *
  *   // headers 服务器响应头
  *   // header 名称都是小写，而且可以使用方括号语法访问
- *   // 例如: `response.headers['content-type']`
+ *   // 例如: `response.headers['hall-type']`
  *   headers: {},
  *
  *   // config  axios请求的配置信息
